@@ -37,8 +37,8 @@ mv ipman.py /any/directory/ipman.py
 This depends on your desktop environment. 
 Navigate to your keyboard shortcuts setting. 
 
-Add a shortcut with the command as `python3 /opt/ipman.py paste` and the shortcut as whatever you want the "paste" shortcut to be. This will be the shortcut that will paste the IP. 
+Add a shortcut with the command as `python3 /path/to/ipman.py paste` and the shortcut as whatever you want the "paste" shortcut to be. This will be the shortcut that will paste the IP. 
 
-Add another shortcut with the command as `python3 /opt/ipman.py setip` and the shortcut as whatever you want the "SetIP" shortcut to be. This shortcut will open the window to set the IP address.
+Add another shortcut with the command as `python3 /path/to/ipman.py setip` and the shortcut as whatever you want the "SetIP" shortcut to be. This shortcut will open the window to set the IP address.
 
 # Thanks!
