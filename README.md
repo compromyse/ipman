@@ -1,5 +1,5 @@
 # IPman
-Tired of copying and pasting the IP address while playing a CTF?
+Tired of losing the IP address in your clipboard while playing a CTF? Not anymore!
 
 ## Demo
 <img src="ipman.gif" alt="demo">
