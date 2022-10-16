@@ -1,19 +1,18 @@
 #!/usr/bin/env python3
-from pynput import keyboard
 from pynput.keyboard import Controller
 import gi
-from time import sleep
 import sys
+
+gi.require_version("Gtk", "3.0")
+from gi.repository import Gtk, GLib
+
+pastekey = Controller()
 
 try:
     option = sys.argv[1]
 except IndexError:
     print(f"Usage: python3 {sys.argv[0]} [paste]/[setip]")
 
-gi.require_version("Gtk", "3.0")
-from gi.repository import Gtk, GLib
-
-pastekey = Controller()
 
 class EntryWindow(Gtk.Window):
     def __init__(self):
@@ -38,14 +37,17 @@ class EntryWindow(Gtk.Window):
             h.write(widget.get_text())
         self.destroy()
 
+
 def prompt():
     win = EntryWindow()
     win.connect("destroy", Gtk.main_quit)
     win.show_all()
     Gtk.main()
 
+
 def paste(text):
     pastekey.type(text)
+
 
 def main():
     if option == "paste":
@@ -56,6 +58,7 @@ def main():
             pass
     elif option == "setip":
         prompt()
+
 
 if __name__ == "__main__":
     try:
